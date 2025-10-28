@@ -1,88 +1,128 @@
-/* 🌆 Make background image full-screen */
+/* 🌌 Full-Screen Casino Background */
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
-    background: url('/static/images/Table casino roulette animation.jpeg') no-repeat center center fixed;
+    font-family: 'Poppins', sans-serif;
+    background: url("../images/Table casino roulette animation.jpeg") no-repeat center center fixed;
     background-size: cover;
+    color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    overflow-x: hidden;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* 🎴 Game Container (centered card table look) */
+/* 🎰 Main Game Area */
 .game-container {
+    text-align: center;
+    backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.65);
-    border: 2px solid gold;
+    padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
-    padding: 30px 50px;
-    width: 400px;
-    text-align: center;
-    margin-top: 50px;
-}
-
-/* 🎯 Title */
-h1 {
-    color: gold;
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
-    font-size: 2rem;
-    margin-top: 20px;
-}
-
-/* 🃏 Buttons styling */
-button {
-    padding: 10px 25px;
-    font-size: 1rem;
-    margin: 10px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    background: linear-gradient(135deg, #00bfff, #1e90ff);
-    color: white;
-    transition: all 0.3s ease;
-}
-
-button:hover {
-    background: linear-gradient(135deg, #1e90ff, #00bfff);
-    transform: scale(1.05);
-}
-
-/* 📜 Instructions box (bottom) */
-.instructions {
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(6px);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #f1f1f1;
+    margin-top: 60px;
     width: 90%;
-    max-width: 800px;
-    margin-bottom: 30px;
-    padding: 25px;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-    text-align: center;
-    animation: fadeIn 2s ease;
+    max-width: 700px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1.2s ease-in-out;
 }
 
-/* ✨ Title inside instruction box */
-.instructions h2 {
+/* ♠️ Title */
+.title {
+    font-size: 2.2rem;
+    font-weight: 700;
     color: gold;
-    margin-bottom: 10px;
-    font-size: 1.8rem;
+    text-shadow: 0 0 10px #ff0, 0 0 20px #f90;
+    margin-bottom: 20px;
 }
 
-.instructions p {
+/* 🃏 Hands Layout */
+.hand {
+    margin: 15px;
     font-size: 1.1rem;
-    line-height: 1.7;
 }
 
-/* 🔥 Fade in animation */
+/* 🎮 Buttons */
+.btn {
+    background: linear-gradient(45deg, #ffb300, #ff0062);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    background: linear-gradient(45deg, #ffcc00, #ff4081);
+}
+
+/* 🔄 Hidden Button */
+.hidden {
+    display: none;
+}
+
+/* 🧾 Status Text */
+.status {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    color: #00ffcc;
+    font-weight: bold;
+    text-shadow: 0 0 8px #00ffd9;
+}
+
+/* 📖 Instructions */
+.instructions {
+    width: 90%;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    text-align: left;
+    animation: slideUp 1.2s ease-in-out;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+}
+
+.instructions h2 {
+    color: #ffdd00;
+    text-align: center;
+    text-shadow: 0 0 8px #ffb300;
+}
+
+.instructions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.instructions li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* 💖 Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+    color: #ccc;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ✨ Animations */
 @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
