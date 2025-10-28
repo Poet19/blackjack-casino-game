@@ -1,128 +1,41 @@
-/* 🌌 Full-Screen Casino Background */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: url("../images/Table casino roulette animation.jpeg") no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: url('/static/images/Table casino roulette animation.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  margin: 0;
 }
 
-/* 🎰 Main Game Area */
-.game-container {
-    text-align: center;
-    backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.65);
-    padding: 30px;
-    border-radius: 20px;
-    margin-top: 60px;
-    width: 90%;
-    max-width: 700px;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
-    animation: fadeIn 1.2s ease-in-out;
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 80%;
 }
 
-/* ♠️ Title */
-.title {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: gold;
-    text-shadow: 0 0 10px #ff0, 0 0 20px #f90;
-    margin-bottom: 20px;
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-/* 🃏 Hands Layout */
+button:hover {
+  background-color: orange;
+}
+
 .hand {
-    margin: 15px;
-    font-size: 1.1rem;
+  margin: 20px 0;
+  font-size: 1.2rem;
 }
 
-/* 🎮 Buttons */
-.btn {
-    background: linear-gradient(45deg, #ffb300, #ff0062);
-    border: none;
-    border-radius: 12px;
-    color: white;
-    font-size: 1.2rem;
-    padding: 10px 25px;
-    margin: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
-}
-
-.btn:hover {
-    transform: scale(1.08);
-    background: linear-gradient(45deg, #ffcc00, #ff4081);
-}
-
-/* 🔄 Hidden Button */
-.hidden {
-    display: none;
-}
-
-/* 🧾 Status Text */
 .status {
-    font-size: 1.3rem;
-    margin-top: 20px;
-    color: #00ffcc;
-    font-weight: bold;
-    text-shadow: 0 0 8px #00ffd9;
-}
-
-/* 📖 Instructions */
-.instructions {
-    width: 90%;
-    max-width: 700px;
-    background: rgba(0, 0, 0, 0.75);
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 40px;
-    text-align: left;
-    animation: slideUp 1.2s ease-in-out;
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
-}
-
-.instructions h2 {
-    color: #ffdd00;
-    text-align: center;
-    text-shadow: 0 0 8px #ffb300;
-}
-
-.instructions ul {
-    list-style: none;
-    padding: 0;
-}
-
-.instructions li {
-    margin: 10px 0;
-    font-size: 1.1rem;
-    color: #fff;
-}
-
-/* 💖 Footer */
-footer {
-    text-align: center;
-    padding: 15px;
-    font-size: 1rem;
-    color: #ccc;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.5);
-}
-
-/* ✨ Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+  font-size: 1.3rem;
+  margin-top: 20px;
+  font-weight: bold;
 }
